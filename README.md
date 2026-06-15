@@ -88,6 +88,7 @@ The WebSocket server will start on `wss://0.0.0.0:8765`
    - Google Cloud TTS integration
    - Amazon Polly integration
    - Audio format conversion and streaming
+   - You could also use open source TTS models like XTTS which provide option of modified voice using short clip.
 
 3. **Speech_to_text**: Manages conversation flow
    - Handles WebSocket connections
