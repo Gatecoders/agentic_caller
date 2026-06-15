@@ -13,34 +13,14 @@ const VoiceChat = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [username, setUsername] = useState("");
   const [title, setTitle] = useState("Mr");
-  const [provider, setProvider] = useState("Google");
+  const [provider, setProvider] = useState("Azure");
   const [voice, setVoice] = useState("");
 
-  const googleVoices = [
-    "en-IN-Chirp3-HD-Charon",
-    "en-IN-Chirp3-HD-Puck",
-    "en-IN-Chirp-HD-D",
-    "en-IN-Chirp-HD-O",
-    "en-IN-Chirp3-HD-Aoede",
-    "en-IN-Chirp3-HD-Fenrir",
-    "en-IN-Chirp3-HD-Kore",
-    "en-IN-Chirp3-HD-Leda",
-    "en-IN-Chirp3-HD-Orus",
-    "en-IN-Chirp3-HD-Zephyr",
-    "en-IN-Chirp-HD-F",
-    "en-IN-Neural2-A",
-    "en-IN-Neural2-B",
-    "en-IN-Neural2-C",
-    "en-IN-Neural2-D",
-    "en-IN-Standard-A",
-    "en-IN-Standard-B",
-    "en-IN-Standard-C",
-    "en-IN-Standard-D",
-    "en-IN-Standard-E",
-    "en-IN-Standard-F",
-    "en-IN-Wavenet-A",
-    "en-IN-Wavenet-B",
-    "en-IN-Wavenet-C",
+  const azureVoices = [
+    "hi-IN-AaravNeural", "hi-IN-ArjunNeural", "hi-IN-KunalNeural", "hi-IN-RehaanNeural", "hi-IN-MadhurNeural", "hi-IN-AnanyaNeural", "hi-IN-AartiNeural", 
+    "hi-IN-KavyaNeural", "hi-IN-SwaraNeural", "en-IN-Arjun:DragonHDLatestNeural", "en-IN-ArjunIndicNeural", "en-IN-PrabhatIndicNeural", "en-IN-AaravNeural", 
+    "en-IN-ArjunNeural", "en-IN-KunalNeural", "en-IN-PrabhatNeural", "en-IN-RehaanNeural", "en-IN-Meera:DragonHDLatestNeural", "en-IN-Aarti:DragonHDLatestNeural",
+    "en-IN-AartiIndicNeural", "en-IN-NeerjaIndicNeural", "en-IN-AashiNeural", "en-IN-AartiNeural", "en-IN-AnanyaNeural", "en-IN-KavyaNeural", "en-IN-NeerjaNeural"
   ];
 
   const amazonVoices = ["Raveena", "Aditi", "Kajal"];
@@ -195,7 +175,7 @@ const VoiceChat = () => {
                 }}
                 className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition duration-200"
               >
-                <option value="Google">Google</option>
+                <option value="Azure">Azure</option>
                 <option value="Amazon">Amazon</option>
               </select>
             </div>
@@ -210,7 +190,7 @@ const VoiceChat = () => {
                 className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition duration-200"
               >
                 <option value="">Select a voice</option>
-                {(provider === "Google" ? googleVoices : amazonVoices).map(
+                {(provider === "Azure" ? azureVoices : amazonVoices).map(
                   (voiceOption) => (
                     <option key={voiceOption} value={voiceOption}>
                       {voiceOption}

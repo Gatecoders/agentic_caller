@@ -192,7 +192,7 @@ class Text_to_Speech:
             logging.info(f"Error in Amazon Polly TTS: {e}")
     
     async def google_cloud_tts(self, websocket, text, speaker):
-        credentials = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
+        credentials = os.getenv("GEMINI_API_KEY")
         try:
             client = texttospeech.TextToSpeechClient()
             synthesis_input = texttospeech.SynthesisInput(text=text)
@@ -221,6 +221,36 @@ class Text_to_Speech:
             return duration_seconds
         except Exception as e:
             logging.info(f"Error in Google Cloud TTS: {e}")
+    
+    async def azure_text_to_speech(self, websocket, text, speaker):
+        import azure.cognitiveservices.speech as speechsdk
+
+        SPEECH_KEY = os.getenv("AZURE_TTS_KEY")
+        SPEECH_REGION = "AZURE_SPEECH_REGION"
+
+        speech_config = speechsdk.SpeechConfig(
+            subscription=SPEECH_KEY,
+            region=SPEECH_REGION
+        )
+
+        # Choose a voice (you can change this later)
+        speech_config.speech_synthesis_voice_name = "en-IN-NeerjaNeural"
+
+        audio_config = speechsdk.audio.AudioOutputConfig(use_default_speaker=True)
+
+        synthesizer = speechsdk.SpeechSynthesizer(
+            speech_config=speech_config,
+            audio_config=audio_config
+        )
+
+        text = "Hello! This is Azure Text to Speech working in your AI system."
+
+        result = synthesizer.speak_text_async(text).get()
+
+        if result.reason == speechsdk.ResultReason.SynthesizingAudioCompleted:
+            print("Speech done successfully")
+        else:
+            print("Error:", result.reason)
 
 
 class Speech_to_text:
@@ -233,7 +263,7 @@ class Speech_to_text:
     async def speak_response(self, websocket, provider, text, speaker):
         duration = 0  # Initialize duration to zer
         if provider == 'google':
-            duration = await self.tts.google_cloud_tts(websocket, text, speaker)
+            duration = await self.tts.azure_text_to_speech(websocket, text, speaker)
         elif provider == 'amazon':
             duration = await self.tts.polly_tts(websocket, text, speaker)
         return duration
@@ -391,10 +421,10 @@ class Speech_to_text:
 
 
 async def main():
-    ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-    ssl_context.load_cert_chain(certfile='cert.pem', keyfile='key.pem')
-    start_server = await websockets.serve(Speech_to_text().handle_text, "0.0.0.0", 8765)
-    logging.info("WebSocket server started on ws://0.0.0.0:8765")
+    # ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+    # ssl_context.load_cert_chain(certfile='cert.pem', keyfile='key.pem')
+    start_server = await websockets.serve(Speech_to_text().handle_text, "0.0.0.0", 8000)
+    logging.info("WebSocket server started on ws://0.0.0.0:8000")
     await start_server.wait_closed()
     logging.info("Connection Terminated.")
 

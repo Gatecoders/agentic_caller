@@ -1,0 +1,54 @@
+Query: Hello, This is Eva calling. Am I speaking with Mr Parivat?
+Response: 
+Query: Hello Mr Parivat! Sorry to call out of the blue. I am Eva from Salesrobo.ai. How are you doing today?
+Response: 
+Query: Great!, is it a good time to talk?
+Response: 
+Query: Hello, This is Eva calling. Am I speaking with Mr Parivat?
+Response: 
+Query: Hello Mr Parivat! Sorry to call out of the blue. I am Eva from Salesrobo.ai. How are you doing today?
+Response: 
+Query: Hello, This is Eva calling. Am I speaking with Mr Parivat?
+Response: 
+Query: Hello Mr Parivat! Sorry to call out of the blue. I am Eva from Salesrobo.ai. How are you doing today?
+Response: 
+Query: Great!, is it a good time to talk?
+Response: 
+Query: Thank you, Mr Parivat. The reason I am calling is to tell you about Salesrobo.ai and what we have available. Would you like to hear more?
+Response: 
+Query: Hello, This is Eva calling. Am I speaking with Mr Parivat?
+Response: 
+Query: Hello Mr Parivat! Sorry to call out of the blue. I am Eva from Salesrobo.ai. How are you doing today?
+Response: 
+Query: Great!, is it a good time to talk?
+Response: 
+Query: Hello, This is Eva calling. Am I speaking with Mr Parivat?
+Response: 
+Query: Hello Mr Parivat! Sorry to call out of the blue. I am Eva from Salesrobo.ai. How are you doing today?
+Response: 
+Query: Great!, is it a good time to talk?
+Response: 
+Query: Thank you, Mr Parivat. The reason I am calling is to tell you about Salesrobo.ai and what we have available. Would you like to hear more?
+Response: 
+Query: Hello, This is Eva calling. Am I speaking with Mr Parivat?
+Response: 
+Query: Hello Mr Parivat! Sorry to call out of the blue. I am Eva from Salesrobo.ai. How are you doing today?
+Response: 
+Query: Great!, is it a good time to talk?
+Response: 
+Query: Thank you, Mr Parivat. The reason I am calling is to tell you about Salesrobo.ai and what we have available. Would you like to hear more?
+Response: 
+Query: Hello, This is Eva calling. Am I speaking with Mr Parivat?
+Response: 
+Query: Hello Mr Parivat! Sorry to call out of the blue. I am Eva from Salesrobo.ai. How are you doing today?
+Response: 
+Query: Great!, is it a good time to talk?
+Response: 
+Query: Thank you, Mr Parivat. The reason I am calling is to tell you about Salesrobo.ai and what we have available. Would you like to hear more?
+Response: 
+Query: Hello, This is Eva calling. Am I speaking with Mr Parivat?
+Response: 
+Query: Hello Mr Parivat! Sorry to call out of the blue. I am Eva from Salesrobo.ai. How are you doing today?
+Response: 
+Query: Great!, is it a good time to talk?
+Response: 
