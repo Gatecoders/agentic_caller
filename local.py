@@ -209,8 +209,8 @@ async def handle_local_ws(websocket):
 
         user     = data.get("username", "")
         title    = data.get("title", "")
-        provider = data.get("provider", "amazon").lower()
-        speaker  = data.get("voice", "Kajal")
+        provider = data.get("provider", "azure").lower()
+        speaker  = data.get("voice", "en-IN-NeerjaNeural")
 
         logging.info(f"Local WS handshake — user={title} {user}, provider={provider}, voice={speaker}")
         await handler.handle(websocket, user, title, provider, speaker)

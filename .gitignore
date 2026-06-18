@@ -1,123 +1,168 @@
-# Byte-compiled / optimized / DLL files
+# ==========================================
+# Python
+# ==========================================
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
 *.so
-
-# Distribution / packaging
 .Python
 build/
 dist/
 downloads/
 .eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
 *.egg-info/
+.installed.cfg
 *.egg
-pip-wheel-metadata/
 
-# Virtual Environments
+# ==========================================
+# Virtual Environment
+# ==========================================
 venv/
+.venv/
 env/
 ENV/
-.venv/
+virtualenv/
 
-# Environment Variables
+# ==========================================
+# Environment Variables / Secrets
+# ==========================================
 .env
 .env.*
-*.env
+*.pem
+*.key
+*.crt
+credentials.json
+service-account.json
 
-# Jupyter Notebook
+# ==========================================
+# Logs
+# ==========================================
+logs/
+*.log
+
+# ==========================================
+# IDEs
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==========================================
+# macOS
+# ==========================================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ==========================================
+# Jupyter
+# ==========================================
 .ipynb_checkpoints/
 
-# VS Code
-.vscode/
-
-# PyCharm
-.idea/
-
-# Sublime Text
-*.sublime-project
-*.sublime-workspace
-
-# macOS
-.DS_Store
-
-# Windows
-Thumbs.db
-desktop.ini
-
-# Logs
-*.log
-logs/
-
-# SQLite Databases
-*.sqlite3
-*.db
-
-# Flask
-instance/
-.webassets-cache
-
-# Django
-db.sqlite3
-media/
-staticfiles/
-
+# ==========================================
 # Testing
+# ==========================================
 .pytest_cache/
 .coverage
 htmlcov/
 .tox/
-.cache/
+.nox/
 
-# Type Checkers
+# ==========================================
+# Type Checkers / Linters
+# ==========================================
 .mypy_cache/
 .pyre/
 .pytype/
+.ruff_cache/
 
-# Machine Learning
-models/
-checkpoints/
-artifacts/
-mlruns/
-wandb/
-tensorboard_logs/
-runs/
-
-# Large Data Files
-data/
-datasets/
-*.csv
-*.parquet
-*.h5
-*.hdf5
-*.pkl
-*.joblib
-
-# Temporary Files
-tmp/
-temp/
+# ==========================================
+# Build Artifacts
+# ==========================================
+*.sqlite3
+*.db
+*.bak
 *.tmp
-*.swp
+*.temp
 
-# IDEs
-*.iml
+# ==========================================
+# Audio Files (optional)
+# Uncomment if generated dynamically
+# ==========================================
+# *.wav
+# *.mp3
+# recordings/
+# audio/
 
-# Docker
-.dockerignore
-
-# Secrets
-secrets.json
-credentials.json
-service-account.json
-
-# AWS
+# ==========================================
+# AWS / GCP Credentials
+# ==========================================
 .aws/
+gcp-credentials.json
+google-credentials.json
 
-# Node.js (if frontend exists)
+# ==========================================
+# FreeSWITCH / SIP Generated Files
+# ==========================================
+freeswitch.log
+sip_logs/
+
+# ==========================================
+# Frontend - Node.js
+# ==========================================
 node_modules/
 npm-debug.log*
+yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-caller_bk_20260603/google_cloud_tts.json
+# Package manager files
+.pnpm-store/
+.npm/
+
+# ==========================================
+# React / Vite / Next.js
+# ==========================================
+.next/
+out/
+dist/
+build/
+.vercel/
+
+# ==========================================
+# Vue / Nuxt
+# ==========================================
+.nuxt/
+.output/
+
+# ==========================================
+# Angular
+# ==========================================
+.angular/
+.cache/
+
+# ==========================================
+# Coverage Reports
+# ==========================================
+coverage/
+
+# ==========================================
+# Environment Variables
+# ==========================================
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ==========================================
+# Misc
+# ==========================================
+*.tsbuildinfo
+.eslintcache

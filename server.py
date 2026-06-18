@@ -1,14 +1,3 @@
-"""
-server.py — Production WebSocket server.
-
-Designed for cloud / VPS deployment where the frontend runs on a
-different origin (or the same server).  SSL is supported via the
-commented-out lines below.
-
-Run:
-    python server.py
-"""
-
 import asyncio
 import json
 import logging
@@ -45,8 +34,8 @@ async def handle_client(websocket):
 
         user     = data.get("username", "")
         title    = data.get("title", "")
-        provider = data.get("provider", "amazon").lower()
-        speaker  = data.get("voice", "Kajal")
+        provider = data.get("provider", "azure").lower()
+        speaker  = data.get("voice", "en-IN-NeerjaNeural")
 
         logging.info(f"Handshake — user={title} {user}, provider={provider}, voice={speaker}")
         await handler.handle(websocket, user, title, provider, speaker)

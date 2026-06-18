@@ -1,8 +1,8 @@
 let socket = null;
 
 export const connectWebSocket = (onMessage, onOpen, onError, onClose, preferences) => {
-  // socket = new WebSocket("wss://caller.salesrobo.ai/api_call/");
-  const socket = new WebSocket("ws://0.0.0.0:8000");
+  socket = new WebSocket("ws://20.244.6.45:8000");
+  // socket = new WebSocket("ws://127.0.0.1:8000");
   socket.binaryType = "blob";
 
   socket.onopen = () => {

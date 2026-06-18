@@ -147,6 +147,7 @@ class ConversationHandler:
             f"Generate a brief intro about {gr.company_name} for the user "
             "and ask if they are interested in it."
         )
+        logging.info(text)
         greeted = False
         while True:
             logging.info("Conversation loop tick.")
@@ -154,9 +155,9 @@ class ConversationHandler:
                 if not greeted:
                     greeted = True
                     text = await self._process(websocket, text, provider, speaker)
-
+                logging.info(text)
                 response = await self._speak_and_listen(websocket, provider, text, speaker)
-
+                logging.info(response)
                 if response == "conversation has ended":
                     logging.info("Conversation ended by client.")
                     gr.delete_conversation()

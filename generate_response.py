@@ -146,4 +146,4 @@ class GenerateResponse:
             return response
         except Exception as e:
             logging.error(f"Azure Foundry LLM failed ({e}), falling back to Claude.")
-            yield "I am sorry, I am experiencing technical difficulties. Please hold."
+            return "I am sorry, I am experiencing some difficulties. I will connect with you later."

@@ -28,6 +28,7 @@ class ServerWebsocket:
 def main():
     '''Modify here if you want to run the code in local terminal, local websocket or server socket'''
     ServerWebsocket().run()
+    # LocalWebsocket().run()
 
 
 if __name__ == "__main__":
